@@ -1,0 +1,83 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", "Helvetica Neue", sans-serif;
+
+  /* 색상 팔레트 - 라이트 모드 기본값 */
+  --color-background: oklch(1 0 0);
+  --color-foreground: oklch(0.145 0 0);
+  --color-card: oklch(1 0 0);
+  --color-card-foreground: oklch(0.145 0 0);
+  --color-popover: oklch(1 0 0);
+  --color-popover-foreground: oklch(0.145 0 0);
+  --color-muted: oklch(0.96 0 0);
+  --color-muted-foreground: oklch(0.537 0 0);
+  --color-accent: oklch(0.524 0.1 142.48);
+  --color-accent-foreground: oklch(0.985 0.01 142.48);
+  --color-destructive: oklch(0.577 0.245 29.23);
+  --color-destructive-foreground: oklch(0.985 0.01 29.23);
+  --color-border: oklch(0.96 0 0);
+  --color-input: oklch(0.96 0 0);
+  --color-primary: oklch(0.205 0 0);
+  --color-primary-foreground: oklch(0.985 0 0);
+  --color-secondary: oklch(0.96 0 0);
+  --color-secondary-foreground: oklch(0.205 0 0);
+  --color-ring: oklch(0.205 0 0);
+
+  --radius: 0.5rem;
+}
+
+@layer base {
+  :root {
+    --background: oklch(1 0 0);
+    --foreground: oklch(0.145 0 0);
+    --card: oklch(1 0 0);
+    --card-foreground: oklch(0.145 0 0);
+    --popover: oklch(1 0 0);
+    --popover-foreground: oklch(0.145 0 0);
+    --muted: oklch(0.96 0 0);
+    --muted-foreground: oklch(0.537 0 0);
+    --accent: oklch(0.524 0.1 142.48);
+    --accent-foreground: oklch(0.985 0.01 142.48);
+    --destructive: oklch(0.577 0.245 29.23);
+    --destructive-foreground: oklch(0.985 0.01 29.23);
+    --border: oklch(0.96 0 0);
+    --input: oklch(0.96 0 0);
+    --primary: oklch(0.205 0 0);
+    --primary-foreground: oklch(0.985 0 0);
+    --secondary: oklch(0.96 0 0);
+    --secondary-foreground: oklch(0.205 0 0);
+    --ring: oklch(0.205 0 0);
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: oklch(0.145 0 0);
+    --foreground: oklch(0.985 0 0);
+    --card: oklch(0.145 0 0);
+    --card-foreground: oklch(0.985 0 0);
+    --popover: oklch(0.145 0 0);
+    --popover-foreground: oklch(0.985 0 0);
+    --muted: oklch(0.262 0 0);
+    --muted-foreground: oklch(0.708 0 0);
+    --accent: oklch(0.628 0.188 142.48);
+    --accent-foreground: oklch(0.145 0 0);
+    --destructive: oklch(0.657 0.181 29.23);
+    --destructive-foreground: oklch(0.145 0 0);
+    --border: oklch(0.262 0 0);
+    --input: oklch(0.262 0 0);
+    --primary: oklch(0.985 0 0);
+    --primary-foreground: oklch(0.205 0 0);
+    --secondary: oklch(0.262 0 0);
+    --secondary-foreground: oklch(0.985 0 0);
+    --ring: oklch(0.628 0.188 142.48);
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}

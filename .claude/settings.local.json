@@ -1,0 +1,39 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__context7__resolve-library-id",
+      "mcp__context7__query-docs",
+      "WebFetch(domain:ui.shadcn.com)",
+      "Bash(npm install:*)",
+      "Bash(npm run:*)",
+      "Read(//c/Users/성준/Desktop/workspace/**)",
+      "Bash(rm -rf \"./claude-nextjs-starterkit/temp\")",
+      "Bash(curl -s http://localhost:3000)",
+      "Bash(pkill -f \"next dev\")",
+      "Bash(chmod +x:*)",
+      "Bash(~/.claude/commands/security-check.sh:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(git push:*)",
+      "Skill(update-config)",
+      "Bash(npx shadcn@latest:*)",
+      "Bash(git init:*)",
+      "Bash(git config:*)"
+    ]
+  },
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "echo '{\"systemMessage\": \"✅ 커밋이 완료되었습니다!\"}'",
+            "if": "Bash(git commit:*)",
+            "statusMessage": "커밋 완료 알림"
+          }
+        ]
+      }
+    ]
+  }
+}
